@@ -14,7 +14,7 @@ DAFTAR ISI
 ### Step 1 : Inisialisasi Data
 Tambahkan variabel data_mahasiswa sebagai list kosong yang digunakan untuk menyimpan data mahasiswa, setiap elemen dalam list adalah dictionary yang berisi informasi mahasiswa berupa Nilai Mahasiswa untuk kasus ini :
 
-![gambar](ss/1.png)
+![gambar]
 
 ### Step 2 : Fungsi tambah()
 Fungsi ini untuk menambahkan data mahasiswa baru yang akan diproses sebagai :
@@ -22,22 +22,22 @@ Fungsi ini untuk menambahkan data mahasiswa baru yang akan diproses sebagai :
 - Data yang dimasukkan disimpan dalam bentuk dictionary {"nama": nama, "nilai": nilai}.
 - Dictionary ini ditambahkan ke dalam list data_mahasiswa menggunakan .append().
 
-![gambar](ss/2.png)
+![gambar]
 
 ### Step 3 : Fungsi tampilkan()
 Fungsi ini digunakan untuk menampilkan data nilai mahasiswa ke dalam data_mahasiswa. Tujuan dapat menampilkan seluruh data mahasiswa. Menu ini mampu mengecek apakah data_mahasiswa kosong, Jika tidak kosong data ditampilkan dalam bentuk tabel sesuai data yang telah ditambahkan, Menggunakan enumerate untuk memberikan nomor pada setiap mahasiswa dalam daftar :
 
-![gambar](ss/3.png)
+![gambar]
 
 ### Step 4 : Fungsi hapus(nama)
 Menghapus data mahasiswa berdasarkan nama yang dimasukan/input, sebagai proses menggunakan list comprehension untuk membuat daftar baru yang tidak berisi mahasiswa dengan nama yang dimasukkan, variabel data_mahasiswa diperbarui dengan daftar baru ini :
 
-![gambar](ss/4.png)
+![gambar]
 
 ### Step 5 : Fungsi ubah(nama)
 Fungsi yang akan mengubah nilai mahasiswa berdasarkan nama yang dimasukan/input, mencari data mahasiswa dengan nama tertentu di dalam data_mahasiswa. Jika data ditemukan, maka nilai mahasiswa tersebut diperbarui sesuai input pengguna :
 
-![gambar](ss/5.png)
+![gambar]
 
 ### Step 6 : Fungsi menu()
 Menyediakan Tampilan menu sebagai opsi pengguna, menggunakan perulangan while untuk terus menampilkan menu namun untuk menghentikan program masukan break sebagai perhentian :
@@ -49,14 +49,14 @@ Pilihan menu:
 - 4: Memanggil fungsi ubah(nama).
 - 5: Menghentikan program.
 
-![gambar](ss/6.png)
+![gambar]
 
-![gambar](ss/7.png)
+![gambar]
 
 ### Step 7 : Closed Program
 Pakai menu() untuk memulai sebuah program ketika dirun :
 
-![gambar](ss/8.png)
+![gambar]
 
 ### Step 8 : Run Program
 Tahap akhir adalah uji coba code program yang sudah dibuat dengan mencoba berbagai kemungkinan yang ada.
@@ -64,7 +64,7 @@ Tahap akhir adalah uji coba code program yang sudah dibuat dengan mencoba berbag
 #### Case 1 :
 Kondisi pertama kita akan coba melihat tabel dengan inputkan 2 tampa menambahkan data/masih kosong, maka akan ditampilkan isi tabel masih belum ada datanya, akan ditampilkan 'Belum ada Data Mahasiswa' :
 
-![gambar](ss/9.png)
+![gambar]
 
 #### Case 2 :
 Kondisi kedua selanjutnya mencoba menambahkan data mahasiswa pada tabel, dengan menginputkan 1 untuk menambahkan data mahasiswa.
@@ -73,12 +73,12 @@ Kondisi kedua selanjutnya mencoba menambahkan data mahasiswa pada tabel, dengan 
     - Nama : Dafa Maulana
     - Nilai : 89
 
-![gambar](ss/10.png)
+![gambar]
 
 #### Case 3 :
 Selanjutnya, kondisi ketiga kembali dengan menginputkan 2 untuk melihat daftar data mahasiswa pada tabel, namun dari kondisi sebelumnya yang sudah menambahkan data mahasiswa saya coba tambahkan 3 data mahasiswa lagi. maka akan terlihat pada isi tabel :
 
-![gambar](ss/11.png)
+![gambar]
 
 #### Case 4 :
 Masuk kondisi keempat kita akan coba mengubah data, ada data yang salah diinputkan pada Nilai Mahasiswa 89 diubah menjadi 90, sebelum itu inputkan 4 untuk mengubah maka akan ditampilkan daftar nilai tabel dan diminta untuk memasukan nama mahasiswa yang ingin diubah data nilai -nya. User diminta memasukan kembali data valid yang akan diubah.
@@ -87,23 +87,23 @@ Masuk kondisi keempat kita akan coba mengubah data, ada data yang salah diinputk
     - Nama : Dafa Maulana
     - Nilai : 90
 
-![gambar](ss/12.png)
+![gambar]
 
 #### Case 5 : 
 Kondisi keenam, kita mencoba menghapus sebuah data mahasiswa dengan menginputkan 3 untuk menghapuskan data mahasiswa lalu user diminta memasukan nama mahasiswa yang akan dihapus :
 
-![gambar](ss/13.png)
+![gambar]
 
 #### Case 6 :
 Jika semua data atau program input sudah selesai semua, user dapat menginputkan 5 untuk keluar dari progam :
 
-![gambar](ss/14.png)
+![gambar]
 
 
 
 ## FLOWCHART DAFTAR NILAI
 
-![gambar](ss/15.png)
+![gambar]
 
 
 ### Step 1 :

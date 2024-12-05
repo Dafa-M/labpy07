@@ -4,7 +4,9 @@ class DaftarNilaiMahasiswa:
 
     def tambah(self, nama, nilai):
         self.data_mahasiswa.append({'nama': nama, 'nilai': nilai})
-        print(f"Data mahasiswa '{nama}' berhasil ditambahkan.")
+        print("=" * 30)
+        print(f"|    Data mahasiswa '{nama}' berhasil ditambahkan :)    |")
+        print("=" * 30)
 
     def tampilkan(self):
         if not self.data_mahasiswa:
@@ -35,12 +37,15 @@ if __name__ == "__main__":
     daftar = DaftarNilaiMahasiswa()
 
     while True:
-        print("\nMenu:")
-        print("1. Tambah data")
-        print("2. Tampilkan data")
-        print("3. Hapus data")
-        print("4. Ubah data")
-        print("5. Keluar")
+        
+        print("\n        MENU        ")
+        print("=" * 20)
+        print("| 1. Tambah data   |")
+        print("| 2. Tampilkan data|")
+        print("| 3. Hapus data    |")
+        print("| 4. Ubah data     |")
+        print("| 5. Keluar        |")
+        print("=" * 20)
         
         pilihan = input("Pilih Nomor Menu (1 - 5): ")
 
