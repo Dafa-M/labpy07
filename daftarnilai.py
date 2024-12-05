@@ -3,12 +3,10 @@ class DaftarNilaiMahasiswa:
         self.data_mahasiswa = []
 
     def tambah(self, nama, nilai):
-        # Menambahkan data mahasiswa
         self.data_mahasiswa.append({'nama': nama, 'nilai': nilai})
         print(f"Data mahasiswa '{nama}' berhasil ditambahkan.")
 
     def tampilkan(self):
-        # Menampilkan semua data mahasiswa
         if not self.data_mahasiswa:
             print("Tidak ada data mahasiswa.")
         else:
@@ -17,7 +15,6 @@ class DaftarNilaiMahasiswa:
                 print(f"{i}. Nama: {mhs['nama']}, Nilai: {mhs['nilai']}")
 
     def hapus(self, nama):
-        # Menghapus data berdasarkan nama
         for mhs in self.data_mahasiswa:
             if mhs['nama'] == nama:
                 self.data_mahasiswa.remove(mhs)
@@ -26,7 +23,6 @@ class DaftarNilaiMahasiswa:
         print(f"Data mahasiswa dengan nama '{nama}' tidak ditemukan.")
 
     def ubah(self, nama, nilai_baru):
-        # Mengubah data berdasarkan nama
         for mhs in self.data_mahasiswa:
             if mhs['nama'] == nama:
                 mhs['nilai'] = nilai_baru
@@ -35,7 +31,6 @@ class DaftarNilaiMahasiswa:
         print(f"Data mahasiswa dengan nama '{nama}' tidak ditemukan.")
 
 
-# Program utama
 if __name__ == "__main__":
     daftar = DaftarNilaiMahasiswa()
 
@@ -47,7 +42,7 @@ if __name__ == "__main__":
         print("4. Ubah data")
         print("5. Keluar")
         
-        pilihan = input("Pilih menu (1-5): ")
+        pilihan = input("Pilih Nomor Menu (1 - 5): ")
 
         if pilihan == "1":
             nama = input("Masukkan nama: ")
