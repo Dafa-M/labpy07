@@ -2,19 +2,26 @@ class DaftarNilaiMahasiswa:
     def __init__(self):
         self.data_mahasiswa = []
 
-    def tambah(self, nama, nilai):
-        self.data_mahasiswa.append({'nama': nama, 'nilai': nilai})
-        print("=" * 30)
-        print(f"|    Data mahasiswa '{nama}' berhasil ditambahkan :)    |")
-        print("=" * 30)
+    def tambah(self, nama, nim, gender, nilai):
+        self.data_mahasiswa.append({'nama': nama, 'nim': nim, 'L/P?': gender, 'nilai': nilai})
+        print("=" * 62)
+        print(f"|    Data mahasiswa '{nama}' berhasil ditambahkan 😎   |")
+        print("=" * 62)
 
     def tampilkan(self):
         if not self.data_mahasiswa:
-            print("Tidak ada data mahasiswa.")
+            print()
+            print("=" * 37)
+            print("|    Tidak ada data mahasiswa 😕    |")
+            print("=" * 37)
         else:
-            print("\nDaftar Nilai Mahasiswa:")
+            print("\n              Daftar Nilai Mahasiswa              ")
+            print("=" * 49)
+            print("| NO |       NAMA       |    NIM    |L/P| NILAI |")
+            print("-" * 49)
             for i, mhs in enumerate(self.data_mahasiswa, start=1):
-                print(f"{i}. Nama: {mhs['nama']}, Nilai: {mhs['nilai']}")
+                print(f"|{i:3}.| {mhs['nama']:16} | {mhs['nim']:9} | {mhs['L/P?']:1} | {mhs['nilai']:6}|")
+            print("=" * 49)
 
     def hapus(self, nama):
         for mhs in self.data_mahasiswa:
@@ -24,9 +31,11 @@ class DaftarNilaiMahasiswa:
                 return
         print(f"Data mahasiswa dengan nama '{nama}' tidak ditemukan.")
 
-    def ubah(self, nama, nilai_baru):
+    def ubah(self, nama, nim, gender, nilai_baru):
         for mhs in self.data_mahasiswa:
             if mhs['nama'] == nama:
+                mhs['nim'] = nim
+                mhs['L/P?'] = gender
                 mhs['nilai'] = nilai_baru
                 print(f"Data mahasiswa '{nama}' berhasil diubah.")
                 return
@@ -51,17 +60,21 @@ if __name__ == "__main__":
 
         if pilihan == "1":
             nama = input("Masukkan nama: ")
+            nim = int(input("Masukkan nim: "))
+            gender = input("Masukkan gender: ")
             nilai = float(input("Masukkan nilai: "))
-            daftar.tambah(nama, nilai)
+            daftar.tambah(nama, nim, gender, nilai)
         elif pilihan == "2":
             daftar.tampilkan()
         elif pilihan == "3":
             nama = input("Masukkan nama mahasiswa yang akan dihapus: ")
             daftar.hapus(nama)
         elif pilihan == "4":
-            nama = input("Masukkan nama mahasiswa yang akan diubah: ")
+            nama = input("Masukkan nama mahasiswa yang diubah: ")
+            nim = int("Masukan nim mahasiswa yang diubah: ")
+            gender = input("Masukan gender mahasiswa yang diubah: ")
             nilai_baru = float(input("Masukkan nilai baru: "))
-            daftar.ubah(nama, nilai_baru)
+            daftar.ubah(nama, nim, gender, nilai_baru)
         elif pilihan == "5":
             print("Program selesai. Terima kasih!")
             break
