@@ -11,93 +11,123 @@ DAFTAR ISI
 
 ## CODE PROGRAM DAFTAR NILAI
 
-### Step 1 : Inisialisasi Data
-Tambahkan variabel data_mahasiswa sebagai list kosong yang digunakan untuk menyimpan data mahasiswa, setiap elemen dalam list adalah dictionary yang berisi informasi mahasiswa berupa Nilai Mahasiswa untuk kasus ini :
+### Step 1 : Class DaftarNilaiMahasiswa dan Method Init
+Kelas yang diberikan adalah struktur utama untuk mengelola data mahasiswa. Semua operasi seperti menambah, menampilkan, menghapus, dan mengubah data dilakukan melalui metode-metode yang ada dalam kelas ini.
 
-![gambar]
+Selain itu, Method _init_ adalah konstruktor yang dijalankan saat objek kelas dibuat. Di sini, atribut data_mahasiswa diinisialisasi sebagai list kosong untuk menyimpan data mahasiswa.
 
-### Step 2 : Fungsi tambah()
-Fungsi ini untuk menambahkan data mahasiswa baru yang akan diproses sebagai :
-- Meminta pengguna memasukkan nama dan nilai mahasiswa.
-- Data yang dimasukkan disimpan dalam bentuk dictionary {"nama": nama, "nilai": nilai}.
-- Dictionary ini ditambahkan ke dalam list data_mahasiswa menggunakan .append().
+![gambar](ss/1.png)
 
-![gambar]
+### Step 2 : Method tambah
+Metode ini digunakan untuk menambahkan data mahasiswa baru ke dalam list data_mahasiswa. Data disimpan sebagai dictionary dengan kunci seperti nama, nim, L/P?, dan nilai :
 
-### Step 3 : Fungsi tampilkan()
-Fungsi ini digunakan untuk menampilkan data nilai mahasiswa ke dalam data_mahasiswa. Tujuan dapat menampilkan seluruh data mahasiswa. Menu ini mampu mengecek apakah data_mahasiswa kosong, Jika tidak kosong data ditampilkan dalam bentuk tabel sesuai data yang telah ditambahkan, Menggunakan enumerate untuk memberikan nomor pada setiap mahasiswa dalam daftar :
+![gambar](ss/2.png)
 
-![gambar]
+### Step 3 : Method tampilkan
+Method atau Fungsi ini mencetak daftar mahasiswa yang sudah tersimpan. Jika daftar kosong, akan menampilkan pesan "Tidak ada data mahasiswa". Jika tidak kosong, data ditampilkan dalam bentuk tabel dengan nomor urut, nama, NIM, gender, dan nilai :
 
-### Step 4 : Fungsi hapus(nama)
-Menghapus data mahasiswa berdasarkan nama yang dimasukan/input, sebagai proses menggunakan list comprehension untuk membuat daftar baru yang tidak berisi mahasiswa dengan nama yang dimasukkan, variabel data_mahasiswa diperbarui dengan daftar baru ini :
+![gambar](ss/3.png)
 
-![gambar]
+### Step 4 : Method hapus
+Selanjutnya ada method menghapus data mahasiswa dengan cara kerja program mencari sebuah nama yang telah diinputkan, jika nama ditemukan maka program akan langsung menghapus nama tersebut dari daftar, namun jika tidak ditemukan program akan memberi tahu kalau tidak ada daftar yang ditemukan : 
 
-### Step 5 : Fungsi ubah(nama)
-Fungsi yang akan mengubah nilai mahasiswa berdasarkan nama yang dimasukan/input, mencari data mahasiswa dengan nama tertentu di dalam data_mahasiswa. Jika data ditemukan, maka nilai mahasiswa tersebut diperbarui sesuai input pengguna :
+![gambar](ss/4.png)
 
-![gambar]
+### Step 5 : Method ubah
+Method ini sama seperti sebelumnya jika di lihat dari cara kerjanya namun di fungsi kali ini program akan mengubah suatu nama dari daftar, Jika nama ditemukan, data seperti NIM, gender, dan nilai akan diperbarui. Jika tidak, akan menampilkan pesan bahwa data tidak ditemukan :
+ 
+![gambar](ss/5.png)
 
-### Step 6 : Fungsi menu()
-Menyediakan Tampilan menu sebagai opsi pengguna, menggunakan perulangan while untuk terus menampilkan menu namun untuk menghentikan program masukan break sebagai perhentian :
+### Step 6 : Fungsi _main_ dan Menu interaktif
+Bagian ini adalah titik awal program. Program berjalan dalam loop yang menawarkan menu interaktif kepada pengguna untuk memilih salah satu opsi, Setiap pilihan menjalankan metode yang sesuai dari kelas DaftarNilaiMahasiswa. Jika pilihan tidak valid, program akan meminta pengguna mencoba lagi :
 
-Pilihan menu:
-- 1: Memanggil fungsi tambah().
-- 2: Memanggil fungsi tampilkan().
-- 3: Memanggil fungsi hapus(nama).
-- 4: Memanggil fungsi ubah(nama).
-- 5: Menghentikan program.
+1. Tambah data (opsi 1)
+2. Tampilkan data (opsi 2)
+3. Hapus data (opsi 3)
+4. Ubah data (opsi 4)
+5. Keluar dari program (opsi 5)
 
-![gambar]
+![gambar](ss/6.png)
 
-![gambar]
+![gambar](ss/7.png)
 
-### Step 7 : Closed Program
-Pakai menu() untuk memulai sebuah program ketika dirun :
-
-![gambar]
-
-### Step 8 : Run Program
+### Step 7 : Run Program
 Tahap akhir adalah uji coba code program yang sudah dibuat dengan mencoba berbagai kemungkinan yang ada.
 
 #### Case 1 :
-Kondisi pertama kita akan coba melihat tabel dengan inputkan 2 tampa menambahkan data/masih kosong, maka akan ditampilkan isi tabel masih belum ada datanya, akan ditampilkan 'Belum ada Data Mahasiswa' :
+Kondisi pertama kita akan coba melihat tabel dengan inputkan 2 tampa menambahkan data/masih kosong, maka akan ditampilkan isi tabel masih belum ada datanya, akan ditampilkan 'Tidak ada Data Mahasiswa' :
 
-![gambar]
+![gambar](ss/8.png)
 
 #### Case 2 :
-Kondisi kedua selanjutnya mencoba menambahkan data mahasiswa pada tabel, dengan menginputkan 1 untuk menambahkan data mahasiswa.
+Kondisi kedua selanjutnya mencoba menambahkan data mahasiswa pada tabel, dengan menginputkan 1 untuk menambahkan data mahasiswa. Untuk awalan, coba memasukan satu data mahasiswa :
 
-- Untuk perawalan, mencoba memasukan satu data mahasiswa :
-    - Nama : Dafa Maulana
-    - Nilai : 89
+- Nama : Dafa Maulana
+- Nim : 312410387
+- Gender : L
+- Nilai : 90
 
-![gambar]
+![gambar](ss/9.png)
 
 #### Case 3 :
-Selanjutnya, kondisi ketiga kembali dengan menginputkan 2 untuk melihat daftar data mahasiswa pada tabel, namun dari kondisi sebelumnya yang sudah menambahkan data mahasiswa saya coba tambahkan 3 data mahasiswa lagi. maka akan terlihat pada isi tabel :
+Selanjutnya, kondisi ketiga masukan/tambah lagi daftar mahasiswa sebanyak 3 data untuk memperbanyak data yang ditampilkan, setelah itu pilih 2 kembali untuk melihat data yyang sudah ditambahkan, berikut data yang harus di tambahkan :
 
-![gambar]
+1. Data pertama :
+    - Nama : Raihan Ardiansyah
+    - Nim : 312410396
+    - Gender : L
+    - Nilai : 92
+
+![gambar](ss/10.png)
+
+2. Data kedua :
+    - Nama : M. Nikmal Wahid
+    - Nim : 312410372
+    - Gender : L
+    -Nilai : 95
+
+![gambar](ss/11.png)
+
+3. Data ketiga :
+    - Nama : Yarni Gea
+    - Nim : 312410413
+    - Gender : P
+    - Nilai : 98
+
+![gambar](ss/12.png)
+
+Jika sudah maka tampilan pada tabel akan seperti berikut :
+
+![gambar](ss/13.png)
 
 #### Case 4 :
-Masuk kondisi keempat kita akan coba mengubah data, ada data yang salah diinputkan pada Nilai Mahasiswa 89 diubah menjadi 90, sebelum itu inputkan 4 untuk mengubah maka akan ditampilkan daftar nilai tabel dan diminta untuk memasukan nama mahasiswa yang ingin diubah data nilai -nya. User diminta memasukan kembali data valid yang akan diubah.
+Masuk kondisi keempat kita akan coba mengubah data, ada data yang salah diinputkan pada Nilai Mahasiswa 92 diubah menjadi 93, sebelum itu inputkan 4 untuk mengubah lalu user diminta untuk memasukan nama mahasiswa, nim, gender, dan Nilai beru, kita coba memasukan data berikut :
 
-- Coba memasukan data mahasiswa berikut :
-    - Nama : Dafa Maulana
-    - Nilai : 90
+1. Data yang diubah :
+    - Nama : Raihan Ardiansyah
+    - Nim : 312410396
+    - Gender : L
+    - Nilai : 93
 
-![gambar]
+![gambar](ss/14.png)
+
+Maka Tampilan nya akan seperti berikut ini :
+
+![gambar](ss/15.png)
 
 #### Case 5 : 
 Kondisi keenam, kita mencoba menghapus sebuah data mahasiswa dengan menginputkan 3 untuk menghapuskan data mahasiswa lalu user diminta memasukan nama mahasiswa yang akan dihapus :
 
-![gambar]
+![gambar](ss/16.png)
+
+Maka data telah dihapus dari tabel data :
+
+![gambar](ss/18.png)
 
 #### Case 6 :
 Jika semua data atau program input sudah selesai semua, user dapat menginputkan 5 untuk keluar dari progam :
 
-![gambar]
+![gambar](ss/17.png)
 
 
 
