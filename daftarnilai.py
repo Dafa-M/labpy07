@@ -27,9 +27,13 @@ class DaftarNilaiMahasiswa:
         for mhs in self.data_mahasiswa:
             if mhs['nama'] == nama:
                 self.data_mahasiswa.remove(mhs)
-                print(f"Data mahasiswa '{nama}' berhasil dihapus.")
+                print("=" * 59)
+                print(f"|    Data mahasiswa '{nama}' berhasil dihapus 🥳    |")
+                print("=" * 59)
                 return
-        print(f"Data mahasiswa dengan nama '{nama}' tidak ditemukan.")
+        print("=" * 67)
+        print(f"|   Data mahasiswa dengan nama '{nama}' tidak ditemukan 🧐  |")
+        print("=" * 67)
 
     def ubah(self, nama, nim, gender, nilai_baru):
         for mhs in self.data_mahasiswa:
@@ -37,9 +41,13 @@ class DaftarNilaiMahasiswa:
                 mhs['nim'] = nim
                 mhs['L/P?'] = gender
                 mhs['nilai'] = nilai_baru
-                print(f"Data mahasiswa '{nama}' berhasil diubah.")
+                print("=" * 55)
+                print(f"|   Data mahasiswa '{nama}' berhasil diubah 🥳  |")
+                print("=" * 55)
                 return
-        print(f"Data mahasiswa dengan nama '{nama}' tidak ditemukan.")
+        print("=" * 67)
+        print(f"|   Data mahasiswa dengan nama '{nama}' tidak ditemukan 🧐  |")
+        print("=" * 67)
 
 
 if __name__ == "__main__":
@@ -71,12 +79,16 @@ if __name__ == "__main__":
             daftar.hapus(nama)
         elif pilihan == "4":
             nama = input("Masukkan nama mahasiswa yang diubah: ")
-            nim = int("Masukan nim mahasiswa yang diubah: ")
+            nim = int(input("Masukan nim mahasiswa yang diubah: "))
             gender = input("Masukan gender mahasiswa yang diubah: ")
             nilai_baru = float(input("Masukkan nilai baru: "))
             daftar.ubah(nama, nim, gender, nilai_baru)
         elif pilihan == "5":
-            print("Program selesai. Terima kasih!")
+            print("=" * 42)
+            print("|    Program selesai. Terima kasih 🤩    |")
+            print("=" * 42)
             break
         else:
-            print("Pilihan tidak valid, silakan coba lagi.")
+            print("=" * 50)
+            print("|    Pilihan tidak valid, silakan coba lagi 😓   |")
+            print("=" * 50)
