@@ -1,13 +1,13 @@
 DAFTAR ISI
 ==========
-- [LAPORAN PRAKTIKUM 7](#laporan-praktikum-7)  
+- [LAPORAN PRAKTIKUM 8](#laporan-praktikum-7)  
     - [CODE PROGRAM DAFTAR NILAI](#code-program-daftar-nilai)
     - [FLOWCHART DAFTAR NILAI](#flowchart-daftar-nilai)
     - [DIGRAM CLASS](#diagram-class)
     - [KESIMPULAN](#kesimpulan)
 
 
-# LAPORAN PRAKTIKUM 7
+# LAPORAN PRAKTIKUM 8
 
 
 ## CODE PROGRAM DAFTAR NILAI
