@@ -3,6 +3,7 @@ DAFTAR ISI
 - [LAPORAN PRAKTIKUM 7](#laporan-praktikum-7)  
     - [CODE PROGRAM DAFTAR NILAI](#code-program-daftar-nilai)
     - [FLOWCHART DAFTAR NILAI](#flowchart-daftar-nilai)
+    - [DIGRAM CLASS](#diagram-class)
     - [KESIMPULAN](#kesimpulan)
 
 
@@ -133,7 +134,7 @@ Jika semua data atau program input sudah selesai semua, user dapat menginputkan 
 
 ## FLOWCHART DAFTAR NILAI
 
-![gambar]
+![gambar](ss/19.png)
 
 
 ### Step 1 :
@@ -167,6 +168,19 @@ Lalu User akan diarahkan kembali ke inisialiasi menu.
 
 - jika Keluar, User akan keluar program dan program akan berhenti.
 
+## DIAGRAM CLASS
+
+![gambar](ss/20.png)
+
+Pada gambar menampilkan sebuah class dari code program daftarnilaimahasiswa, dengan adanya diagram class ini kita mampu melihat mana saja diagram class atau tipe class yang terdapat pada code program ini :
+
++ _init_()
++ tambah(nama: str, nim: int, gender: str, nilai: int)
++ tampilkan()
++ hapus(nama: str)
++ ubah(nama: str, nim: int, gender: str, nilai: int)
++ menu_interaktif()
+
 
 ## KESIMPULAN
-Dengan membuat code program daftar nilai ini saya pribadi dapat mengambil pelajaran, fungsi dapat memanggil sebuah data yang telah diberikan, dengan sub rutin ini kita menjadi dipermudah dengan baik. Melalui code program daftar nilai ini saya mampu memasukan sebuah data nama mahasiswa dan nilai. Adapun flowchart yang membantu saya dalam memahami alur sebuah code program yang telah saya buat.
+Dengan membuat code program daftar nilai ini saya pribadi dapat mengambil pelajaran, Program ini memiliki fungsi utama, yaitu menambahkan data mahasiswa, menampilkan data yang telah tersimpan, menghapus data berdasarkan nama, serta mengubah data yang ada. Semua fungsi tersebut diimplementasikan melalui metode dalam kelas bernama DaftarNilaiMahasiswa. Data mahasiswa disimpan dalam bentuk list yang berisi dictionary. Program ini juga menyediakan menu interaktif yang memungkinkan pengguna memilih operasi seperti tambah, tampilkan, hapus, ubah, atau keluar dari program. Dengan pendekatan ini, pengelolaan data mahasiswa menjadi lebih terstruktur, fleksibel, dan mudah digunakan.
